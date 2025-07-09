@@ -31,44 +31,63 @@
         private void InitializeComponent()
         {
             btnBrowse = new Button();
-            txtimport = new Button();
-            textBox1 = new TextBox();
+            btnImport = new Button();
+            txtFilePath = new TextBox();
+            OFD = new OpenFileDialog();
+            progressBar1 = new ProgressBar();
             SuspendLayout();
             // 
             // btnBrowse
             // 
-            btnBrowse.Location = new Point(563, 56);
+            btnBrowse.Location = new Point(643, 75);
+            btnBrowse.Margin = new Padding(3, 4, 3, 4);
             btnBrowse.Name = "btnBrowse";
-            btnBrowse.Size = new Size(194, 43);
+            btnBrowse.Size = new Size(222, 57);
             btnBrowse.TabIndex = 0;
             btnBrowse.Text = "Browse";
             btnBrowse.UseVisualStyleBackColor = true;
             btnBrowse.Click += btnBrowse_click;
             // 
-            // txtimport
+            // btnImport
             // 
-            txtimport.Location = new Point(557, 120);
-            txtimport.Name = "txtimport";
-            txtimport.Size = new Size(200, 32);
-            txtimport.TabIndex = 1;
-            txtimport.Text = "Import";
-            txtimport.UseVisualStyleBackColor = true;
+            btnImport.Location = new Point(637, 160);
+            btnImport.Margin = new Padding(3, 4, 3, 4);
+            btnImport.Name = "btnImport";
+            btnImport.Size = new Size(229, 43);
+            btnImport.TabIndex = 1;
+            btnImport.Text = "Import";
+            btnImport.UseVisualStyleBackColor = true;
+            btnImport.Click += btnImport_Click;
             // 
-            // textBox1
+            // txtFilePath
             // 
-            textBox1.Location = new Point(23, 37);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(512, 23);
-            textBox1.TabIndex = 2;
+            txtFilePath.Location = new Point(24, 75);
+            txtFilePath.Margin = new Padding(3, 4, 3, 4);
+            txtFilePath.Name = "txtFilePath";
+            txtFilePath.Size = new Size(570, 27);
+            txtFilePath.TabIndex = 2;
+            // 
+            // OFD
+            // 
+            OFD.FileName = "openFileDialog1";
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(24, 166);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(570, 29);
+            progressBar1.TabIndex = 3;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 217);
-            Controls.Add(textBox1);
-            Controls.Add(txtimport);
+            ClientSize = new Size(914, 289);
+            Controls.Add(progressBar1);
+            Controls.Add(txtFilePath);
+            Controls.Add(btnImport);
             Controls.Add(btnBrowse);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -78,7 +97,9 @@
         #endregion
 
         private Button btnBrowse;
-        private Button txtimport;
-        private TextBox textBox1;
+        private Button btnImport;
+        private TextBox txtFilePath;
+        private OpenFileDialog OFD;
+        private ProgressBar progressBar1;
     }
 }

@@ -1,6 +1,6 @@
 namespace XMLtoDB;
 
-{
+
     internal static class Program
     {
         /// <summary>
@@ -16,4 +16,3 @@ namespace XMLtoDB;
 
         }
     }
-}
